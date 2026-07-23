@@ -1,0 +1,104 @@
+---
+title: 2026年第14期
+issueNo: 14
+volumeNo: 760
+publishDate: 2026-07-23
+sections:
+  - title: 正风反腐在身边
+    items:
+      - page: 42
+        title: 让老百姓有托举（二）
+        author: 步入深水护“薪”安
+
+      - page: 46
+        title: 协调联动织密护“薪”网
+        author: 李伟辰 李林韩
+
+      - page: 47
+        title: 269面锦旗背后的“薪”事
+        author: 姚艺 谢利军
+
+      - page: 48
+        title: 以数字监管守好劳动者“钱袋子”
+        author: 王雪钰 贾棋渊
+
+      - page: 49
+        title: 纾解“薪”愁 护得民心安
+        author: 窦克林
+
+  - title: 书记说纪
+    items:
+      - page: 50
+        title: 提升以案促改促治综合效能
+        author: 赵志国
+
+      - page: 51
+        title: 深挖“病灶”精准开方
+        author: 张文伟
+
+      - page: 52
+        title: 以案为鉴常敲“警钟”
+        author: 张力
+
+  - title: 实证纪法
+    items:
+      - page: 53
+        title: 如何理解把握国有企业领导人员廉洁从业规定
+        author: 周明建
+
+  - title: 廉洁文化
+    items:
+      - page: 58
+        title: 笔墨扬清风 金石刻廉韵
+        author: 曹雅丽
+---
+
+import { formatMagazineDate } from '../../../utils/date.ts';
+
+<div class="magazine-toc">
+
+<div class='toc-header'>
+  <p>
+    2026年第{frontmatter.issueNo}期 | 总第{frontmatter.volumeNo}期 |{' '}
+    {formatMagazineDate(new Date(frontmatter.publishDate))}出版
+  </p>
+</div>
+
+import Heading from '../../../components/Heading.astro';
+
+<section>
+
+{
+frontmatter.sections.map(section => (
+
+<div>
+  <Heading text={section.title} level={3}>
+    {section.title}
+  </Heading>
+
+{
+section.items.map(item => (
+
+    <div class="toc-item">
+
+      <span>{item.page}</span>
+
+      <p>{item.title}</p>
+
+      <em>{item.author}</em>
+
+    </div>
+
+))
+}
+
+</div>
+
+))
+}
+
+</section>
+
+</div>
+
+<script></script>

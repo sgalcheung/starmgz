@@ -7,7 +7,7 @@ import starlightThemeGalaxy from 'starlight-theme-galaxy';
 export default defineConfig({
   integrations: [
     starlight({
-      title: 'My Docs',
+      title: 'Star MGZ',
       social: [
         {
           icon: 'github',
@@ -17,18 +17,17 @@ export default defineConfig({
       ],
       sidebar: [
         {
-          label: 'Guides',
-          items: [
-            // Each item here is one entry in the navigation menu.
-            { label: 'Example Guide', slug: 'guides/example' },
-          ],
+          label: 'Static',
+          items: [{ autogenerate: { directory: 'static' } }],
         },
         {
-          label: 'Reference',
-          items: [{ autogenerate: { directory: 'reference' } }],
+          label: 'Dynamic',
+          items: [{ autogenerate: { directory: 'dynamic' } }],
         },
       ],
+      customCss: ['./src/styles/magazine.css'],
       plugins: [starlightThemeGalaxy()],
+      routeMiddleware: './src/routeDataMiddleware.ts',
     }),
   ],
 });
