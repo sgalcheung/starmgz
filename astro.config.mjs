@@ -5,6 +5,7 @@ import starlightThemeGalaxy from 'starlight-theme-galaxy';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://sgalcheung.github.io',
   integrations: [
     starlight({
       title: 'Star MGZ',
