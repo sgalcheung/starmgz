@@ -2,9 +2,7 @@
 title: 2026年第14期
 ---
 
-
 <div class="magazine-toc">
-
 
 <div class="toc-header">
 
@@ -12,12 +10,9 @@ title: 2026年第14期
 
 </div>
 
-
-
 <section>
 
 ### 正风反腐在身边
-
 
 <div class="toc-item">
 <span>42</span>
@@ -25,13 +20,11 @@ title: 2026年第14期
 <em>步入深水护“薪”安</em>
 </div>
 
-
 <div class="toc-item">
 <span>46</span>
 <p>协调联动织密护“薪”网</p>
 <em>李伟辰 李林韩</em>
 </div>
-
 
 <div class="toc-item">
 <span>47</span>
@@ -39,13 +32,11 @@ title: 2026年第14期
 <em>姚艺 谢利军</em>
 </div>
 
-
 <div class="toc-item">
 <span>48</span>
 <p>以数字监管守好劳动者“钱袋子”</p>
 <em>王雪钰 贾棋渊</em>
 </div>
-
 
 <div class="toc-item">
 <span>49</span>
@@ -53,11 +44,7 @@ title: 2026年第14期
 <em>窦克林</em>
 </div>
 
-
-<h3>
-书记说纪
-</h3>
-
+### 书记说纪
 
 <div class="toc-item">
 <span>50</span>
@@ -65,13 +52,11 @@ title: 2026年第14期
 <em>赵志国</em>
 </div>
 
-
 <div class="toc-item">
 <span>51</span>
 <p>深挖“病灶”精准开方</p>
 <em>张文伟</em>
 </div>
-
 
 <div class="toc-item">
 <span>52</span>
@@ -79,11 +64,7 @@ title: 2026年第14期
 <em>张力</em>
 </div>
 
-
-<h3>
-实证纪法
-</h3>
-
+### 实证纪法
 
 <div class="toc-item">
 <span>53</span>
@@ -91,10 +72,7 @@ title: 2026年第14期
 <em>周明建</em>
 </div>
 
-<h3>
-廉洁文化
-</h3>
-
+### 廉洁文化
 
 <div class="toc-item">
 <span>58</span>
@@ -102,9 +80,6 @@ title: 2026年第14期
 <em>曹雅丽</em>
 </div>
 
-
 </section>
-
-
 
 </div>

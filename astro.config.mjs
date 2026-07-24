@@ -17,12 +17,21 @@ export default defineConfig({
       ],
       sidebar: [
         {
+          label: 'Dynamic',
+          items: [{ autogenerate: { directory: 'dynamic' } }],
+        },
+        {
           label: 'Static',
           items: [{ autogenerate: { directory: 'static' } }],
         },
         {
-          label: 'Dynamic',
-          items: [{ autogenerate: { directory: 'dynamic' } }],
+          label: 'StarlightPage',
+          items: [
+            {
+              label: '2026年第14期',
+              link: '/magazine/',
+            },
+          ],
         },
       ],
       customCss: ['./src/styles/magazine.css'],
