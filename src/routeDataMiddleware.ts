@@ -55,7 +55,7 @@ export const onRequest = defineRouteMiddleware((context) => {
     }
   }
 
-  if (sections == undefined) {
+  if (Number(currentId)) {
     renderSideBar(route, context.locals.catalogs, currentId);
   }
 });
