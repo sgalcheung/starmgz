@@ -3,6 +3,7 @@ import {
   type StarlightRouteData,
 } from '@astrojs/starlight/route-data';
 import Slugger from 'github-slugger';
+import type { CatalogType } from './content/schemas';
 
 export const onRequest = defineRouteMiddleware((context) => {
   usePageTitleInTOC(context.locals.starlightRoute);
@@ -10,6 +11,9 @@ export const onRequest = defineRouteMiddleware((context) => {
   const route = context.locals.starlightRoute;
 
   const sections = route.entry.data.sections;
+
+  const pathSegments = context.url.pathname.split('/').filter(Boolean);
+  const currentId = pathSegments.at(-1) ?? '';
 
   // handle sections in the frontmatter to generate a table of contents for the page(MDX)
   if (sections) {
@@ -50,6 +54,10 @@ export const onRequest = defineRouteMiddleware((context) => {
       }
     }
   }
+
+  if (sections == undefined) {
+    renderSideBar(route, context.locals.catalogs, currentId);
+  }
 });
 
 export function usePageTitleInTOC(starlightRoute: StarlightRouteData) {
@@ -57,4 +65,25 @@ export function usePageTitleInTOC(starlightRoute: StarlightRouteData) {
   if (overviewLink) {
     overviewLink.text = '概览';
   }
+}
+
+function renderSideBar(
+  starlightRoute: StarlightRouteData,
+  catalogs: CatalogType,
+  id: string,
+) {
+  starlightRoute.sidebar = catalogs.map((catalog) => ({
+    type: 'group',
+    label: catalog.label,
+    entries: catalog.items.map((item) => ({
+      type: 'link',
+      label: item.label,
+      href: item.link,
+      isCurrent: item.link.endsWith(id),
+      badge: undefined,
+      attrs: {},
+    })),
+    collapsed: false,
+    badge: undefined,
+  }));
 }

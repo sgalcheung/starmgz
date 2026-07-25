@@ -1,0 +1,68 @@
+[
+  {
+    "id": "202614",
+    "year": 2026,
+    "issueNo": 14,
+    "volumeNo": 760,
+    "publishDate": "2026-07-23",
+    "sections": [
+      {
+        "title": "封面故事",
+        "items": [
+          {
+            "page": 1,
+            "title": "星际杂志 2026 年夏季特刊",
+            "author": "编辑部",
+            "link": "/magazine/202614/cover"
+          }
+        ]
+      },
+      {
+        "title": "专栏",
+        "items": [
+          {
+            "page": 5,
+            "title": "未来太空城市的设计",
+            "author": "李华",
+            "link": "/magazine/202614/space-city"
+          },
+          {
+            "page": 12,
+            "title": "人工智能与艺术创作",
+            "author": "王敏"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "202607",
+    "year": 2026,
+    "issueNo": 7,
+    "volumeNo": 2026,
+    "publishDate": "2026-06-01",
+    "sections": [
+      {
+        "title": "特别报道",
+        "items": [
+          {
+            "page": 1,
+            "title": "月球开发最新进展",
+            "author": "陈杰",
+            "link": "/magazine/202607/moon-development"
+          }
+        ]
+      },
+      {
+        "title": "技术快讯",
+        "items": [
+          {
+            "page": 8,
+            "title": "下一代低轨卫星网络",
+            "author": "赵磊"
+          }
+        ]
+      }
+    ]
+  }
+]
