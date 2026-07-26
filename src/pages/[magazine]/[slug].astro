@@ -12,6 +12,7 @@ interface MarkdownHeading {
 
 export async function getStaticPaths() {
   return [
+    { params: { magazine: 'zgjjjc', slug: '202501' } },
     { params: { magazine: 'zgjjjc', slug: '202607' } },
     { params: { magazine: 'zgjjjc', slug: '202614' } },
     { params: { magazine: 'cpaj', slug: '202607' } },
@@ -60,6 +61,10 @@ const headings: MarkdownHeading[] =
               <Heading text={section.title} level={3}>
                 {section.title}
               </Heading>
+
+              {section.subTitle && (
+                <p class='toc-subtitle'>{section.subTitle}</p>
+              )}
 
               {(section.items ?? []).map((item) => (
                 <div class='toc-item'>

@@ -67,6 +67,9 @@ const zgjjjcsSchema = z.object({
         // 栏目标题
         title: z.string(),
 
+        // 栏目副标题（文章总标题）
+        subTitle: z.string().optional(),
+
         // 栏目文章
         items: z.array(
           z.object({
