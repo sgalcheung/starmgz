@@ -47,7 +47,7 @@ const docs = defineCollection({
   }),
 });
 
-const zgjjjcsSchema = z.object({
+const magazineSchema = z.object({
   // 年份
   year: z.number(),
 
@@ -74,7 +74,7 @@ const zgjjjcsSchema = z.object({
         items: z.array(
           z.object({
             // 页码
-            page: z.number(),
+            page: z.number().or(z.string()),
 
             // 标题
             title: z.string(),
@@ -93,10 +93,16 @@ const zgjjjcsSchema = z.object({
 
 const zgjjjcs = defineCollection({
   loader: file('./src/data/zgjjjcs.json'),
-  schema: zgjjjcsSchema,
+  schema: magazineSchema,
+});
+
+const cpajs = defineCollection({
+  loader: file('./src/data/cpajs.json'),
+  schema: magazineSchema,
 });
 
 export const collections = {
   docs,
   zgjjjcs,
+  cpajs,
 };

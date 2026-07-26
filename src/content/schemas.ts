@@ -1,7 +1,11 @@
-export interface CatalogType extends Array<{
+interface CatalogItem {
   label: string;
-  items: Array<{
-    label: string;
-    link: string;
-  }>;
-}> {}
+  link: string;
+}
+
+interface CatalogCategory {
+  label: string;
+  items: CatalogItem[];
+}
+
+export type CatalogType = CatalogCategory[];

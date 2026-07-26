@@ -1,7 +1,7 @@
 ---
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 import Heading from '../../components/Heading.astro';
-import { getCollection, getEntry } from 'astro:content';
+import { getEntry } from 'astro:content';
 import { formatMagazineDate } from '../../utils/date';
 
 interface MarkdownHeading {
@@ -10,22 +10,28 @@ interface MarkdownHeading {
   text: string;
 }
 
+// TODO: generation from collections
 export async function getStaticPaths() {
   return [
     { params: { magazine: 'zgjjjc', slug: '202501' } },
     { params: { magazine: 'zgjjjc', slug: '202607' } },
     { params: { magazine: 'zgjjjc', slug: '202614' } },
+    { params: { magazine: 'cpaj', slug: '202601' } },
     { params: { magazine: 'cpaj', slug: '202607' } },
   ];
 }
 
 const { magazine, slug } = Astro.params;
 
-// const year = Number(slug.slice(0, 4));
-// const issueNo = Number(slug.slice(4));
-// const title = `${year}年第${issueNo}期`;
+const collectionName =
+  magazine === 'zgjjjc'
+    ? 'zgjjjcs'
+    : magazine === 'cpaj'
+      ? 'cpajs'
+      : undefined;
 
-const data = (await getEntry('zgjjjcs', slug))?.data;
+const entry = collectionName && slug ? await getEntry(collectionName, slug) : undefined;
+const data = entry?.data;
 if (!data) return;
 
 const title = `${data?.year}年第${data?.issueNo}期`;

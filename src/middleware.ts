@@ -1,6 +1,72 @@
 import { defineMiddleware } from 'astro:middleware';
 import type { CatalogType } from './content/schemas';
-import { getCollection } from 'astro:content';
+import { getCollection, type CollectionEntry } from 'astro:content';
+
+type MagazineEntry = CollectionEntry<'zgjjjcs'> | CollectionEntry<'cpajs'>;
+const catalogCache = new Map<string, CatalogType>();
+
+// `context` and `next` are automatically typed
+export const onRequest = defineMiddleware(async (context, next) => {
+  const pathSegments = context.url.pathname.split('/').filter(Boolean);
+  const currentPathPrefix =
+    pathSegments.length > 1
+      ? `/${pathSegments.slice(0, -1).join('/')}`
+      : `/${pathSegments[0] ?? ''}`;
+
+  if (
+    !currentPathPrefix.includes('zgjjjc') &&
+    !currentPathPrefix.includes('cpaj')
+  ) {
+    await next();
+    return;
+  }
+
+  const magazineKey = pathSegments.at(-2);
+  if (!magazineKey) return;
+
+  if (catalogCache.has(magazineKey)) {
+    const cachedCatalogs = catalogCache.get(magazineKey);
+    if (cachedCatalogs) {
+      context.locals.catalogs = cachedCatalogs;
+      await next();
+      return;
+    }
+  } else {
+    const collectionName = currentPathPrefix.includes('zgjjjc')
+      ? 'zgjjjcs'
+      : currentPathPrefix.includes('cpaj')
+        ? 'cpajs'
+        : undefined;
+
+    if (!collectionName) {
+      await next();
+      return;
+    }
+
+    const entries: MagazineEntry[] =
+      collectionName === 'zgjjjcs'
+        ? await getCollection('zgjjjcs')
+        : await getCollection('cpajs');
+
+    const grouped = groupBySafe<MagazineEntry, number>(
+      entries,
+      (entry) => entry.data.year,
+    );
+
+    const catalogs: CatalogType = Array.from(grouped, ([year, items]) => ({
+      label: `${String(year)} 年`,
+      items: items.map((item) => ({
+        label: `${item?.data.year}年第${item?.data.issueNo}期`,
+        link: `${currentPathPrefix}/${item.id}`,
+      })),
+    }));
+
+    catalogCache.set(magazineKey, catalogs);
+    context.locals.catalogs = catalogs;
+  }
+
+  await next();
+});
 
 /**
  * 类型安全的 Object.groupBy 包装器
@@ -23,42 +89,3 @@ function groupBySafe<T, K extends PropertyKey>(
 
   return result;
 }
-
-// `context` and `next` are automatically typed
-export const onRequest = defineMiddleware(async (context, next) => {
-
-  let catalogs: CatalogType = [];
-
-  const cacheData = context.locals.catalogs;
-
-  if (cacheData) {
-    catalogs = cacheData;
-  } else {
-    const zgjjjcsEntries = await getCollection('zgjjjcs');
-
-    const pathSegments = context.url.pathname.split('/').filter(Boolean);
-    const currentPathPrefix =
-      pathSegments.length > 1
-        ? `/${pathSegments.slice(0, -1).join('/')}`
-        : `/${pathSegments[0] ?? ''}`;
-
-    const grouped = groupBySafe(
-      zgjjjcsEntries,
-      (zgjjjcsEntry) => zgjjjcsEntry.data.year,
-    );
-
-    catalogs = Array.from(grouped, ([year, items]) => ({
-      label: `${year} 年`,
-      items: items.map((item) => ({
-        label: `${item?.data.year}年第${item?.data.issueNo}期`,
-        link: `${currentPathPrefix}/${item.id}`,
-      })),
-    }));
-  }
-
-  // console.log(catalogs[0].items);
-
-  context.locals.catalogs = catalogs;
-
-  await next();
-});
