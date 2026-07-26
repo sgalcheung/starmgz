@@ -55,7 +55,7 @@ export const onRequest = defineRouteMiddleware((context) => {
     }
   }
 
-  if (Number(currentId)) {
+  if (Number(currentId) && Number(currentId) != 404) {
     renderSideBar(route, context.locals.catalogs, currentId);
   }
 });
