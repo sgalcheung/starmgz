@@ -3,6 +3,7 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 import Heading from '../../components/Heading.astro';
 import { getEntry } from 'astro:content';
 import { formatMagazineDate } from '../../utils/date';
+import { getCollection } from 'astro:content';
 
 interface MarkdownHeading {
   depth: number;
@@ -10,29 +11,36 @@ interface MarkdownHeading {
   text: string;
 }
 
-// TODO: generation from collections
 export async function getStaticPaths() {
+  const zgjjjcEntries = await getCollection('zgjjjcs');
+  const cpajEntries = await getCollection('cpajs');
+
   return [
-    { params: { magazine: 'zgjjjc', slug: '202501' } },
-    { params: { magazine: 'zgjjjc', slug: '202607' } },
-    { params: { magazine: 'zgjjjc', slug: '202614' } },
-    { params: { magazine: 'cpaj', slug: '202601' } },
-    { params: { magazine: 'cpaj', slug: '202607' } },
+    ...zgjjjcEntries.map((entry) => ({
+      params: {
+        magazine: 'zgjjjc',
+        slug: entry.id,
+      },
+    })),
+    ...cpajEntries.map((entry) => ({
+      params: {
+        magazine: 'cpaj',
+        slug: entry.id,
+      },
+    })),
   ];
 }
 
 const { magazine, slug } = Astro.params;
 
 const collectionName =
-  magazine === 'zgjjjc'
-    ? 'zgjjjcs'
-    : magazine === 'cpaj'
-      ? 'cpajs'
-      : undefined;
+  magazine === 'zgjjjc' ? 'zgjjjcs' : magazine === 'cpaj' ? 'cpajs' : null;
 
-const entry = collectionName && slug ? await getEntry(collectionName, slug) : undefined;
+if (!collectionName || !slug) return;
+
+const entry = await getEntry(collectionName, slug);
 const data = entry?.data;
-if (!data) return;
+if (!entry || !data) return;
 
 const title = `${data?.year}年第${data?.issueNo}期`;
 
