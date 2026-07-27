@@ -16,11 +16,10 @@ const docs = await getCollection(
   ({ data }) => data.template !== 'splash',
 );
 
-const currentPath = 'dynamic/example';
+const mdPath = 'markdownpage/dynamic';
 
-const magazineDoc = docs.find((doc) => doc.id === currentPath);
+const magazineDoc = docs.find((doc) => doc.id === mdPath);
 if (!magazineDoc) return;
-// console.log(docs.length);
 
 const data = magazineDoc?.data;
 const publishDate = data?.publishDate
@@ -42,7 +41,7 @@ function groupDocs(docs: CollectionEntry<'docs'>[]) {
   const groups = new Map<string, CollectionEntry<'docs'>[]>();
 
   for (const doc of docs) {
-    const key = doc.id.split('/')[0] ?? '_root';
+    const key = doc.filePath?.split('/')[3] ?? '_root';
 
     let items = groups.get(key);
 
@@ -68,20 +67,20 @@ function renderSidebar(
   const groups = groupDocs(docs);
 
   const sidebar = [...groups.entries()]
-    .map(([group, items]) => {
-      if (group === '_root') {
+    .map(([groupKey, items]) => {
+      if (groupKey === '_root') {
         return items.map((doc) => ({
-          slug: doc.id,
           label: doc.data.sidebar?.label ?? doc.data.title,
+          slug: doc.id,
         }));
       }
 
       return {
-        label: capitalize(group),
+        label: capitalize(groupKey),
         collapsed: false,
         items: items.map((doc) => ({
-          slug: doc.id,
           label: doc.data.sidebar?.label ?? doc.data.title,
+          slug: doc.id,
         })),
       };
     })

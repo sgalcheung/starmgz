@@ -19,12 +19,8 @@ export default defineConfig({
       ],
       sidebar: [
         {
-          label: 'Dynamic',
-          items: [{ autogenerate: { directory: 'dynamic' } }],
-        },
-        {
-          label: 'Static',
-          items: [{ autogenerate: { directory: 'static' } }],
+          label: 'MarkdownPage',
+          items: [{ autogenerate: { directory: 'markdownPage' } }],
         },
         {
           label: 'StarlightPage',

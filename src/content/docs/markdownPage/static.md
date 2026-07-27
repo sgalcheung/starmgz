@@ -1,5 +1,5 @@
 ---
-title: 2026年第14期
+title: 2026年第2期
 ---
 
 <div class="magazine-toc">

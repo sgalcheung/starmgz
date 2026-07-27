@@ -4,6 +4,7 @@ import {
 } from '@astrojs/starlight/route-data';
 import Slugger from 'github-slugger';
 import type { CatalogType } from './content/schemas';
+import type { APIContext } from 'astro';
 
 export const onRequest = defineRouteMiddleware((context) => {
   usePageTitleInTOC(context.locals.starlightRoute);
@@ -14,6 +15,7 @@ export const onRequest = defineRouteMiddleware((context) => {
 
   const pathSegments = context.url.pathname.split('/').filter(Boolean);
   const currentId = pathSegments.at(-1) ?? '';
+  updateSitePage(context);
 
   // handle sections in the frontmatter to generate a table of contents for the page(MDX)
   if (sections) {
@@ -60,7 +62,21 @@ export const onRequest = defineRouteMiddleware((context) => {
   }
 });
 
-export function usePageTitleInTOC(starlightRoute: StarlightRouteData) {
+function updateSitePage(context: APIContext) {
+  const currentURI = context.url.pathname;
+
+  if (currentURI.includes('magazine') || currentURI.includes('markdownpage')) {
+    context.locals.starlightRoute.siteTitle += ' Demo';
+  }
+  if (currentURI.includes('zgjjjc')) {
+    context.locals.starlightRoute.siteTitle = '《中国纪检监察》';
+  }
+  if (currentURI.includes('cpaj')) {
+    context.locals.starlightRoute.siteTitle = '《中国行政管理》';
+  }
+}
+
+function usePageTitleInTOC(starlightRoute: StarlightRouteData) {
   const overviewLink = starlightRoute.toc?.items[0];
   if (overviewLink) {
     overviewLink.text = '概览';
