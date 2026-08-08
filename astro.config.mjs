@@ -37,4 +37,7 @@ export default defineConfig({
       routeMiddleware: './src/routeDataMiddleware.ts',
     }),
   ],
+  experimental: {
+    incrementalBuild: true,
+  },
 });

@@ -21,12 +21,14 @@ export async function getStaticPaths() {
         magazine: 'zgjjjc',
         slug: entry.id,
       },
+      cacheKey: String(entry.data.sections),
     })),
     ...cpajEntries.map((entry) => ({
       params: {
         magazine: 'cpaj',
         slug: entry.id,
       },
+      cacheKey: String(entry.data.sections),
     })),
   ];
 }
