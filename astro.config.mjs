@@ -38,6 +38,6 @@ export default defineConfig({
     }),
   ],
   experimental: {
-    incrementalBuild: true,
+    // incrementalBuild: true, // Unused, wait stable, see discussion: https://github.com/withastro/roadmap/pull/1404
   },
 });
