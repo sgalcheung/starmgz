@@ -1,5 +1,5 @@
 ---
-title: 2026年第2期
+title: 2026年第14期（static page）
 ---
 
 <div class="magazine-toc">
@@ -13,11 +13,12 @@ title: 2026年第2期
 <section>
 
 ### 正风反腐在身边
+<p class='toc-subtitle'>让老百姓有托举（二）</p>
 
 <div class="toc-item">
 <span>42</span>
-<p>让老百姓有托举（二）</p>
-<em>步入深水护“薪”安</em>
+<p>步入深水护“薪”安——四川省成都市纪检监察机关治理政府项目、国企项目拖欠农民工工资工作纪实</p>
+<em>窦克林 幸廷婷 李铭瑞</em>
 </div>
 
 <div class="toc-item">

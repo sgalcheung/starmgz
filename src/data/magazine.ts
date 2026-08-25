@@ -1,4 +1,6 @@
 import { z } from 'astro/zod';
+import { AuthorSchema } from './author';
+import { reference } from 'astro:content';
 
 /**
  * 单篇文章
@@ -10,8 +12,9 @@ export const MagazineItemSchema = z.object({
   // 标题
   title: z.string(),
 
-  // 作者
-  author: z.string().optional(),
+  // 作者（可选）n:n
+  // use reference: https://docs.astro.build/en/guides/content-collections/#defining-collection-references
+  authors: z.array(reference('authors')).default([]),
 
   // 跳转链接
   link: z.string().optional(),

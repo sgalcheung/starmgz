@@ -6,186 +6,76 @@
     "volumeNo": 487,
     "publishDate": "2026-01-30",
     "sections": [
-    {
-      "title": "卷首文",
-      "items": [
-        {
-          "page": 1,
-          "title": "过往与走来",
-          "author": "本刊编辑部",
-          "link": ""
-        }
-      ]
-    },
-    {
-      "title": "本刊专稿",
-      "subTitle": "“夏书章学术奖”专题",
-      "items": [
-        {
-          "page": 2,
-          "title": "传承学术精神 凝聚学术力量",
-          "author": "李宝荣",
-          "link": ""
-        },
-        {
-          "page": 4,
-          "title": "培育学术英才 服务国家治理",
-          "author": "高松",
-          "link": ""
-        },
-        {
-          "page": 5,
-          "title": "历史之镜 未来之钟",
-          "author": "王浦劬",
-          "link": ""
-        },
-        {
-          "page": 6,
-          "title": "不忘公管初心 淬砺治理新程",
-          "author": "薛澜",
-          "link": ""
-        },
-        {
-          "page": 7,
-          "title": "“夏书章学术奖”的创设与未来构想",
-          "author": "谭安奎",
-          "link": ""
-        }
-      ]
-    },
-    {
-      "title": "数字治理",
-      "items": [
-        {
-          "page": 9,
-          "title": "“发展—规制”动态平衡与监管敏捷性：以数据跨境流动为例",
-          "author": "陈颖 赵静",
-          "link": ""
-        },
-        {
-          "page": 21,
-          "title": "基于可信数据空间的公共数据开发利用模式研究",
-          "author": "胡业飞 黄思雅",
-          "link": ""
-        },
-        {
-          "page": 34,
-          "title": "如何有效实现我国公共数据授权运营监管？——基于地方行政规则与实践运行的考察",
-          "author": "朱峥",
-          "link": ""
-        },
-        {
-          "page": 45,
-          "title": "面向数字绿色共生：政府数据开放如何破解“数字绿色悖论”",
-          "author": "刘大勇 徐源 张俊艳",
-          "link": ""
-        }
-      ]
-    },
-    {
-      "title": "探索与争鸣",
-      "items": [
-        {
-          "page": 55,
-          "title": "概念方法论的理论重构与中国公共管理自主知识体系构建",
-          "author": "王治国 何达基",
-          "link": ""
-        },
-        {
-          "page": 67,
-          "title": "公共管理概念框架的一体化路径：基于行政理性的普遍工作关系",
-          "author": "罗梁波",
-          "link": ""
-        },
-        {
-          "page": 78,
-          "title": "自主知识体系构建的路径创新：由制度概念共识到学科自主",
-          "author": "雷艳红 王宝恒",
-          "link": ""
-        }
-      ]
-    },
-    {
-      "title": "公共政策",
-      "items": [
-        {
-          "page": 88,
-          "title": "系统性政策浸润：中国重大公共决策的社会动员机制",
-          "author": "谭爽 柴子曈 张航",
-          "link": ""
-        },
-        {
-          "page": 99,
-          "title": "政策叙事与社会表征：公共政策认知何以建构？",
-          "author": "曲纵翔",
-          "link": ""
-        },
-        {
-          "page": 111,
-          "title": "政策遵从在政策变迁中的反馈机制分析——基于行为公共政策的视角",
-          "author": "刘帮成 姜芮",
-          "link": ""
-        }
-      ]
-    },
-    {
-      "title": "地方治理",
-      "items": [
-        {
-          "page": 122,
-          "title": "跨科层边界：“结对治理”模式及内在逻辑分析",
-          "author": "张飘飘 邵春霞",
-          "link": ""
-        },
-        {
-          "page": 133,
-          "title": "国家级开发区的“区政合一”改革：意涵厘定与逻辑阐释",
-          "author": "邹奕",
-          "link": ""
-        },
-        {
-          "page": 145,
-          "title": "跨区域规范性文件的监督审查与协同治理",
-          "author": "张航",
-          "link": ""
-        }
-      ]
-    },
-    {
-      "title": "CPA专版",
-      "items": [
-        {
-          "page": 154,
-          "title": "第一届“夏书章学术奖”获奖名单及成果简介",
-          "author": "",
-          "link": ""
-        },
-        {
-          "page": 156,
-          "title": "《中国行政管理》2026年度重点选题",
-          "author": "",
-          "link": ""
-        },
-        {
-          "page": 121,
-          "title": "“AI新浪潮 就业新展望”主题征文活动征稿启事",
-          "author": "",
-          "link": ""
-        }
-      ]
-    },
-    {
-      "title": "四封",
-      "items": [
-        {
-          "page": "封二/封三",
-          "title": "第一届“夏书章学术奖”颁奖仪式在中山大学举行",
-          "author": "",
-          "link": ""
-        }
-      ]
-    }
-  ]
+      {
+        "title": "卷首文",
+        "items": [
+          {
+            "page": 1,
+            "title": "过往与走来",
+            "authors": ["benkanbianjibu"],
+            "link": ""
+          }
+        ]
+      },
+      {
+        "title": "本刊专稿",
+        "subTitle": "“夏书章学术奖”专题",
+        "items": [
+          { "page": 2, "title": "传承学术精神 凝聚学术力量", "authors": ["libaorong"], "link": "" },
+          { "page": 4, "title": "培育学术英才 服务国家治理", "authors": ["gaosong"], "link": "" },
+          { "page": 5, "title": "历史之镜 未来之钟", "authors": ["wangpuqu"], "link": "" },
+          { "page": 6, "title": "不忘公管初心 淬砺治理新程", "authors": ["xuelan"], "link": "" },
+          { "page": 7, "title": "“夏书章学术奖”的创设与未来构想", "authors": ["tanankui"], "link": "" }
+        ]
+      },
+      {
+        "title": "数字治理",
+        "items": [
+          { "page": 9, "title": "“发展—规制”动态平衡与监管敏捷性：以数据跨境流动为例", "authors": ["chenying", "zhaojing"], "link": "" },
+          { "page": 21, "title": "基于可信数据空间的公共数据开发利用模式研究", "authors": ["huyefei", "huangsiya"], "link": "" },
+          { "page": 34, "title": "如何有效实现我国公共数据授权运营监管？——基于地方行政规则与实践运行的考察", "authors": ["zhuzheng"], "link": "" },
+          { "page": 45, "title": "面向数字绿色共生：政府数据开放如何破解“数字绿色悖论”", "authors": ["liudayong", "xuyuan", "zhangjunyan"], "link": "" }
+        ]
+      },
+      {
+        "title": "探索与争鸣",
+        "items": [
+          { "page": 55, "title": "概念方法论的理论重构与中国公共管理自主知识体系构建", "authors": ["wangzhiguo", "hedaji"], "link": "" },
+          { "page": 67, "title": "公共管理概念框架的一体化路径：基于行政理性的普遍工作关系", "authors": ["luoliangbo"], "link": "" },
+          { "page": 78, "title": "自主知识体系构建的路径创新：由制度概念共识到学科自主", "authors": ["leiyanhong", "wangbaoheng"], "link": "" }
+        ]
+      },
+      {
+        "title": "公共政策",
+        "items": [
+          { "page": 88, "title": "系统性政策浸润：中国重大公共决策的社会动员机制", "authors": ["tanshuang", "chaizitong", "zhanghang"], "link": "" },
+          { "page": 99, "title": "政策叙事与社会表征：公共政策认知何以建构？", "authors": ["quzongxiang"], "link": "" },
+          { "page": 111, "title": "政策遵从在政策变迁中的反馈机制分析——基于行为公共政策的视角", "authors": ["liubangcheng", "jiangrui"], "link": "" }
+        ]
+      },
+      {
+        "title": "地方治理",
+        "items": [
+          { "page": 122, "title": "跨科层边界：“结对治理”模式及内在逻辑分析", "authors": ["zhangpiaopiao", "shaochunxia"], "link": "" },
+          { "page": 133, "title": "国家级开发区的“区政合一”改革：意涵厘定与逻辑阐释", "authors": ["zouyi"], "link": "" },
+          { "page": 145, "title": "跨区域规范性文件的监督审查与协同治理", "authors": ["zhanghang"], "link": "" }
+        ]
+      },
+      {
+        "title": "CPA专版",
+        "items": [
+          { "page": 154, "title": "第一届“夏书章学术奖”获奖名单及成果简介", "authors": [], "link": "" },
+          { "page": 156, "title": "《中国行政管理》2026年度重点选题", "authors": [], "link": "" },
+          { "page": 121, "title": "“AI新浪潮 就业新展望”主题征文活动征稿启事", "authors": [], "link": "" }
+        ]
+      },
+      {
+        "title": "四封",
+        "items": [
+          { "page": "封二/封三", "title": "第一届“夏书章学术奖”颁奖仪式在中山大学举行", "authors": [], "link": "" }
+        ]
+      }
+    ]
   },
   {
     "id": "202607",
@@ -194,139 +84,54 @@
     "volumeNo": 493,
     "publishDate": "2026-01-30",
     "sections": [
-    {
-      "title": "行政改革",
-      "items": [
-        {
-          "page": "1",
-          "title": "零基预算理念引领的“一类事”成本预算绩效分析框架",
-          "author": "曹堂哲 刘雨凡 丰彦骅",
-          "link": ""
-        },
-        {
-          "page": "10",
-          "title": "政府创新补贴与放权赋能改革的政策协同效应研究",
-          "author": "林菡馨 张翔",
-          "link": ""
-        },
-        {
-          "page": "25",
-          "title": "规则与技术的互构：预算绩效管理知识统合的逻辑进路",
-          "author": "莫仕懿 吴超",
-          "link": ""
-        }
-      ]
-    },
-    {
-      "title": "公共服务",
-      "items": [
-        {
-          "page": "34",
-          "title": "基本公共服务一体化改革的基本经验与未来议程",
-          "author": "徐越倩 郁建兴",
-          "link": ""
-        },
-        {
-          "page": "46",
-          "title": "基本公共服务均等化评价标准体系的功能定位与构建路径",
-          "author": "康健 张浅",
-          "link": ""
-        },
-        {
-          "page": "56",
-          "title": "基本公共服务财政支出“差异化同步”的演进逻辑与归因识别",
-          "author": "叶杰 徐锐 马翔",
-          "link": ""
-        }
-      ]
-    },
-    {
-      "title": "“小切口·大问题”专栏",
-      "subTitle": "“一老一小”研究专题",
-      "items": [
-        {
-          "page": "70",
-          "title": "社区养老资源可及性何以有效提升？",
-          "author": "赵浩华",
-          "link": ""
-        },
-        {
-          "page": "84",
-          "title": "人工智能养老伦理风险的情境化识别与系统治理",
-          "author": "朱敏丽 赵曼",
-          "link": ""
-        },
-        {
-          "page": "96",
-          "title": "英国老年“数字领航”模式的实践与启示",
-          "author": "何燕华",
-          "link": ""
-        }
-      ]
-    },
-    {
-      "title": "地方治理",
-      "items": [
-        {
-          "page": "104",
-          "title": "流量赋能：数字时代地方政府竞争新机制",
-          "author": "张慧 何艳玲",
-          "link": ""
-        },
-        {
-          "page": "115",
-          "title": "抗解问题治理的科层组织应对之道",
-          "author": "李倩 冯悦扬 张飚",
-          "link": ""
-        },
-        {
-          "page": "130",
-          "title": "内部把关：县域改革试点中的行动机制及其创新限度",
-          "author": "郑鹏 王婧瑶",
-          "link": ""
-        },
-        {
-          "page": "140",
-          "title": "双向赋能与系统联动：定点帮扶何以常态化赋能乡村振兴",
-          "author": "洪浩 孔祥利",
-          "link": ""
-        }
-      ]
-    },
-    {
-      "title": "CPA专版",
-      "items": [
-        {
-          "page": "150",
-          "title": "政府购买公共服务绩效评价的实践困境与优化路径",
-          "author": "梁毕明 刘鑫晨",
-          "link": ""
-        },
-        {
-          "page": "154",
-          "title": "探寻区域环境治理中府际互动的深层逻辑",
-          "author": "金太军",
-          "link": ""
-        }
-      ]
-    },
-    {
-      "title": "四封",
-      "items": [
-        {
-          "page": "封二",
-          "title": "湖北福建甘肃三省行政管理学会顺利换届",
-          "author": "",
-          "link": ""
-        },
-        {
-          "page": "封三",
-          "title": "第十届中国研究生公共管理案例大赛圆满举办",
-          "author": "",
-          "link": ""
-        }
-      ]
-    }
-  ]
+      {
+        "title": "行政改革",
+        "items": [
+          { "page": "1", "title": "零基预算理念引领的“一类事”成本预算绩效分析框架", "authors": ["caotangzhe", "liuyufan", "fengyanhua"], "link": "" },
+          { "page": "10", "title": "政府创新补贴与放权赋能改革的政策协同效应研究", "authors": ["linhanxin", "zhangxiang"], "link": "" },
+          { "page": "25", "title": "规则与技术的互构：预算绩效管理知识统合的逻辑进路", "authors": ["moshiyi", "wuchao"], "link": "" }
+        ]
+      },
+      {
+        "title": "公共服务",
+        "items": [
+          { "page": "34", "title": "基本公共服务一体化改革的基本经验与未来议程", "authors": ["xuyueqian", "yujianxing"], "link": "" },
+          { "page": "46", "title": "基本公共服务均等化评价标准体系的功能定位与构建路径", "authors": ["kangjian", "zhangqian"], "link": "" },
+          { "page": "56", "title": "基本公共服务财政支出“差异化同步”的演进逻辑与归因识别", "authors": ["yejie", "xurui", "maxiang"], "link": "" }
+        ]
+      },
+      {
+        "title": "“小切口·大问题”专栏",
+        "subTitle": "“一老一小”研究专题",
+        "items": [
+          { "page": "70", "title": "社区养老资源可及性何以有效提升？", "authors": ["zhaohaohua"], "link": "" },
+          { "page": "84", "title": "人工智能养老伦理风险的情境化识别与系统治理", "authors": ["zhuminli", "zhaoman"], "link": "" },
+          { "page": "96", "title": "英国老年“数字领航”模式的实践与启示", "authors": ["heyanhua"], "link": "" }
+        ]
+      },
+      {
+        "title": "地方治理",
+        "items": [
+          { "page": "104", "title": "流量赋能：数字时代地方政府竞争新机制", "authors": ["zhanghui", "heyanling"], "link": "" },
+          { "page": "115", "title": "抗解问题治理的科层组织应对之道", "authors": ["liqian", "fengyueyang", "zhangbiao"], "link": "" },
+          { "page": "130", "title": "内部把关：县域改革试点中的行动机制及其创新限度", "authors": ["zhengpeng", "wangjingyao"], "link": "" },
+          { "page": "140", "title": "双向赋能与系统联动：定点帮扶何以常态化赋能乡村振兴", "authors": ["honghao", "kongxiangli"], "link": "" }
+        ]
+      },
+      {
+        "title": "CPA专版",
+        "items": [
+          { "page": "150", "title": "政府购买公共服务绩效评价的实践困境与优化路径", "authors": ["liangbiming", "liuxinchen"], "link": "" },
+          { "page": "154", "title": "探寻区域环境治理中府际互动的深层逻辑", "authors": ["jintaijun"], "link": "" }
+        ]
+      },
+      {
+        "title": "四封",
+        "items": [
+          { "page": "封二", "title": "湖北福建甘肃三省行政管理学会顺利换届", "authors": [], "link": "" },
+          { "page": "封三", "title": "第十届中国研究生公共管理案例大赛圆满举办", "authors": [], "link": "" }
+        ]
+      }
+    ]
   }
 ]

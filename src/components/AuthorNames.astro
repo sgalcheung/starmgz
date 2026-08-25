@@ -1,0 +1,27 @@
+---
+import { getEntries, getEntry } from 'astro:content';
+import AuthorName from './AuthorName.astro';
+
+interface Props{
+  authors: Array<string>;
+}
+
+const { authors}=Astro.props;
+
+const authorEntries=   (await Promise.all(
+          (authors || []).map(async (authorId) => {
+            try {
+              return await getEntry('authors', authorId);
+            } catch {
+              return null;
+            }
+          })
+        )).filter(entry => entry !== null)
+---
+
+{authorEntries && authorEntries.map((entry, idx) => (
+  <>
+    {entry && <AuthorName author={entry.data} />}
+    {idx < authorEntries.length - 1 && '\t'}
+  </>
+))}

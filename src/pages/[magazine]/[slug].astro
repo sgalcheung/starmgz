@@ -1,9 +1,10 @@
 ---
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 import Heading from '../../components/Heading.astro';
-import { getEntry } from 'astro:content';
+import { getEntries, getEntry } from 'astro:content';
 import { formatMagazineDate } from '../../utils/date';
 import { getCollection } from 'astro:content';
+import AuthorName from '../../components/AuthorName.astro';
 
 interface MarkdownHeading {
   depth: number;
@@ -80,15 +81,24 @@ const headings: MarkdownHeading[] =
                 <p class='toc-subtitle'>{section.subTitle}</p>
               )}
 
-              {(section.items ?? []).map((item) => (
-                <div class='toc-item'>
+              {section.items.map(async (item) => {
+                const authorEntries = await getEntries(item.authors);
+
+              return (
+                <div class="toc-item">
                   <span>{item.page}</span>
-
                   <p>{item.title}</p>
-
-                  <em>{item.author}</em>
+                  <em>
+                      {authorEntries && authorEntries.map((entry, idx) => (
+                        <>
+                          <AuthorName author={entry.data} />
+                          {idx < authorEntries.length - 1 && '\t'}
+                        </>
+                      ))}
+                  </em>
                 </div>
-              ))}
+              )
+              })}
             </div>
           ))
       }

@@ -79,10 +79,19 @@ margin-bottom:40px;
 
 .toc-item em {
   font-style: normal;
-
   text-align: right;
-
   color: #666;
-
   font-size: 14px;
+}
+
+.author-link {
+  color: inherit; /* 继承 em 标签的颜色 */
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: text-decoration-color 0.2s;
+}
+
+.author-link:hover {
+  text-decoration-color: currentColor;
+  color: var(--sl-color-text); /* 使用 starlight 提供的文字颜色，适应白天和夜晚切换 */
 }
